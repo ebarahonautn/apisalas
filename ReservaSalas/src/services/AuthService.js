@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-const apiUrl= "http://localhost:5001/api/auth";
+//const apiUrl= "http://localhost:3006/api/auth";
+const apiUrl= "https://apisalas-test.azurewebsites.net/api/auth";
 
 class AuthService extends React.Component{
     

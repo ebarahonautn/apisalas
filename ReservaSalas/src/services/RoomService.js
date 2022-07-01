@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-const apiUrl= "http://localhost:5001/api/rooms";
+// const apiUrl= "http://localhost:3006/api/rooms";
+const apiUrl='https://apisalas-test.azurewebsites.net/api/rooms'
 
 class RoomService extends React.Component{
     getRoomListFromApi = ()=> new Promise((resolve, reject) =>{
