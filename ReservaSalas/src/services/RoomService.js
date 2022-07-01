@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
+//require('dotenv').config()
 // const apiUrl= "http://localhost:3006/api/rooms";
-const apiUrl='https://apisalas-test.azurewebsites.net/api/rooms'
+
+const apiUrl= process.env.REACT_APP_ROOMS_URL ? process.env.REACT_APP_ROOMS_URL : 'http://localhost:3006/api/rooms';
 
 class RoomService extends React.Component{
     getRoomListFromApi = ()=> new Promise((resolve, reject) =>{

@@ -17,10 +17,10 @@ const users =  [
     }, 
     {
         user: "carlos1234",
-        password: "123456",
+        password: "Hilo@azul92",
         name: "Carlos",
         lastname: "Mora",
-        emailname: "Mora, Carlos"
+        emailname: "carlos.mora@est.utn.ac.cr"
     }
 ];
 

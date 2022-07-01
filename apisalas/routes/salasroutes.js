@@ -4,19 +4,19 @@ module.exports = function(app) {
   var auth = require('../controllers/AuthController');
 
   // todoList Routes
-  app.route('/api/rooms')
+  app.route('/rooms')
     .get(rooms.list_all_rooms)
     .post(rooms.create_a_room)
     .put(rooms.update_a_room);
 
-    app.route('/api/rooms/updateall')
+    app.route('/rooms/updateall')
     .put(rooms.update_rooms);
 
-  app.route('/api/rooms/:roomName')
+  app.route('/rooms/:roomName')
      .get(rooms.read_a_room)
      .delete(rooms.delete_a_room);
 
   //app.route('/api/auth/:username/:password')
-  app.route('/api/auth')
+  app.route('/auth')
      .post(auth.authUser);
 };
