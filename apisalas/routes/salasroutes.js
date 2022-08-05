@@ -9,7 +9,7 @@ module.exports = function(app) {
     .post(rooms.create_a_room)
     .put(rooms.update_a_room);
 
-    app.route('/rooms/updateall')
+  app.route('/rooms/updateall')
     .put(rooms.update_rooms);
 
   app.route('/rooms/:roomName')
@@ -19,4 +19,10 @@ module.exports = function(app) {
   //app.route('/api/auth/:username/:password')
   app.route('/auth')
      .post(auth.authUser);
+
+  app.route('/users')
+    .get(auth.list_all_users);
+  
+  app.route('/users/:user')
+    .get(auth.get_an_user);
 };

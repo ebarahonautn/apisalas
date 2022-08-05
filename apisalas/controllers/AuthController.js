@@ -45,3 +45,24 @@ exports.authUser = function(req, res) {
     };
     res.status(200).send(loggedUser);
 };
+
+exports.list_all_users = function(req, res) {
+    let usersResult = users.map(maskPassword);
+    res.status(200).send(usersResult);
+    //res.json(rooms);
+};
+
+function maskPassword(user){
+    user.password = "*****";
+    return user;
+}
+
+exports.get_an_user = function(req, res) {
+    let user = users.filter(item => item.user === req.params.user);
+    console.log(req.params.user);
+    if (user.length > 0){
+        res.status(200).send(user);
+    }else
+        res.status(404).send({ success: 'false', message: 'User not found' });
+    //res.json(room);
+};

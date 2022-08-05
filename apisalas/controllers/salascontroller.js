@@ -7,6 +7,13 @@ const rooms =  [
         isBusy: false,
         start: null,
         end: null
+    },
+    {
+        room: "CR1-101",
+        capacity: 6,
+        isBusy: false,
+        start: null,
+        end: null
     }
 ];
 
