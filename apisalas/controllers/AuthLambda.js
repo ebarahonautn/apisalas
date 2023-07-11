@@ -29,7 +29,8 @@ export const handler = async(event) => {
     if (event.username === undefined || event === null || event.length === 0 || event === ''){
         response = {
             statusCode: 404,
-            body: JSON.stringify('Must provide the credentials for loggin.'),
+            success: 'false', 
+            message: JSON.stringify('Must provide the credentials for loggin.'),
         };
         return response;
     }
@@ -38,20 +39,18 @@ export const handler = async(event) => {
     if (user.length === 0){
         response = {
             statusCode: 404,
-            body: JSON.stringify('The user/password does not match with the right credentials.'),
+            success: 'false', 
+            message: JSON.stringify('The user/password does not match with the right credentials.'),
         };
         return response;
     }
 
     response = {
-        statusCode: 200,
-        body: {
             user: user[0].user,
             password: "******",
             name: user[0].name,
             lastname: user[0].lastname,
             emailname: user[0].emailname
-        }
     };
     return response;
 };

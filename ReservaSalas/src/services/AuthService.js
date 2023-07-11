@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const apiUrl= "http://localhost:5001/api/auth";
+const apiUrl= "https://612h5hpj38.execute-api.us-east-1.amazonaws.com/dev"; // "http://localhost:5001/api/auth";
 
 class AuthService extends React.Component{
     
