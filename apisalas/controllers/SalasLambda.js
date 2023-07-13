@@ -89,7 +89,7 @@ export const handler_update_a_room = async(event) => {
 //DELETE method
 //Replace function name handler_delete_a_room by handler --> export const handler = async(event) => {
 //function for deleting a room
-export const handler = async(event) => {
+export const handler_delete_a_room = async(event) => {
     if (event.roomName === undefined || event.roomName === null || event.roomName.length === 0){
         return { success: false, message: 'Must provide the room to delete it.' };
     }
