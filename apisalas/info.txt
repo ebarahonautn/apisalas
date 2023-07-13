@@ -1,0 +1,6 @@
+Inside the method, go to the Integration Request:
+1- Add a new Mapping Template --> "application/json"
+2- After adding the new mapping template, add the template needed to send the parameter to function lambda in format json
+{
+    "roomName": "$input.params('roomName')"
+}
